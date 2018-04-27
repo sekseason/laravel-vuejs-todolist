@@ -12,6 +12,7 @@ window.alertify = require('alertifyjs')
 window.select2 = require('select2')
 window.datepicker = require('bootstrap-datepicker')
 window.vuelidate = require('vuelidate')
+window.moment = require('moment')
 
 window.Vue.use(window.vuelidate.default)
 
@@ -53,5 +54,9 @@ switch (path) {
   case String(path.match(/admin\/job\/create/)):
   case String(path.match(/admin\/job\/\d\/edit/)):
     require('./pages/admin/job-create')
+    break
+
+  case String(path.match(/admin\/test/)):
+    require('./pages/test/ntt')
     break
 }

@@ -27,4 +27,6 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
     Route::resource('category', 'Admin\CategoryController');
     Route::resource('job', 'Admin\JobController');
     Route::resource('user', 'Admin\UserController');
+
+    Route::resource('test', 'Test\NttDataController');
 });
